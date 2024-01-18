@@ -15,7 +15,7 @@
     - [Task 1: Advanced Next.js Architecture (30 points)](#task-1-advanced-nextjs-architecture-30-points)
     - [Task 2: Advanced Component Development (35 points)](#task-2-advanced-component-development-35-points)
     - [Task 3: Large Dataset Handling (25 points)](#task-3-large-dataset-handling-25-points)
-    - [Task 4: Performance Optimization and Server-Side](#task-4-performance-optimization-and-server-side)
+    - [Task 4: Performance Optimization and Server-Side Rendering (25 points)](#task-4-performance-optimization-and-server-side-rendering-25-points)
     - [Task 5: Advanced Features (30 points)](#task-5-advanced-features-30-points)
     - [Task 6: Testing and Documentation (15 points)](#task-6-testing-and-documentation-15-points)
   - [Deployment](#deployment)
@@ -148,8 +148,7 @@ Custom Hook (15 points)
 - [X] Implement virtualization or pagination to handle the large dataset without compromising performance.
 - [X] Optimize the data fetching mechanism for minimal server load.
 
-### Task 4: Performance Optimization and Server-Side
-Rendering (25 points)
+### Task 4: Performance Optimization and Server-Side Rendering (25 points)
 - [X] Optimize the application for mobile performance using Google Lighthouse metrics.
 - [X] Implement server-side rendering (SSR) for critical pages to improve the initial loading time.
 - [X] Ensure efficient resource loading using strategies like pre-fetching or pre-loading.
@@ -175,7 +174,7 @@ Submission Guidelines:
 
 ## Deployment
 
-- The host/shell application [here](https://nextjs-typescript-module-federation-host.vercel.app).
+- The host/shell application [here](https://nextjs-typescript-module-federation-host.vercel.app/).
 - The remote application [here](https://nextjs-typescript-module-federation-remote.vercel.app/).
 
 ## Stack, Libraries, and Tools
