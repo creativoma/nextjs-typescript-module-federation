@@ -5,6 +5,7 @@
 - [Technical Test: React Developer with Next.js and TailwindCSS](#technical-test-react-developer-with-nextjs-and-tailwindcss)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
+  - [Screenshots](#screenshots)
   - [Requirements](#requirements)
   - [Installation / How to run](#installation--how-to-run)
   - [Environment Variables](#environment-variables)
@@ -28,13 +29,20 @@
 
 This project is a technical test for a React Developer position. It is a dashboard application built with Next.js and TailwindCSS. The application is a micro-frontend architecture with Module Federation. The application is a dashboard that displays data from a mock API. The dashboard is a dynamic dashboard with charts and graphs.
 
+## Screenshots
+
+![Screenshot 1](./public/screen-1.png)
+![Screenshot 2](./public/screen-2.png)
+![Screenshot 3](./public/screen-3.png)
+![Screenshot 4](./public/screen-4.png)
+
 ## Requirements
 
-- node: v20.10.0
-- npm: v10.3.0
-- module-federation/nextjs-mf: v6.7.1
-- next: v13.4.7
-- tailwindcss: v3.0.23
+- Node: v20.10.0
+- Npm: v10.3.0
+- Module-federation/nextjs-mf: v6.7.1
+- Next: v13.4.7
+- Tailwindcss: v3.0.23
 
 ## Installation / How to run
 
