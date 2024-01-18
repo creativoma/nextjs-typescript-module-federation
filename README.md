@@ -167,10 +167,8 @@ Submission Guidelines:
 
 ## Deployment
 
-
-
-- The host/shell application [here](https://react-nextjs-tailwindcss-microfrontends.vercel.app/).
-- The remote/analytics application [here](https://react-nextjs-tailwindcss-microfrontends-remote.vercel.app/).
+- The host/shell application [here](https://nextjs-typescript-module-federation-host.vercel.app).
+- The remote application [here](https://nextjs-typescript-module-federation-remote.vercel.app/).
 
 ## Stack, Libraries, and Tools
 
