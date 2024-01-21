@@ -76,7 +76,7 @@ const DashboardLayout = ({
             Sign out <TbLogout className="ml-2" />
           </Button>
         </aside>
-        <section className="px-4 pb-4 pt-6 w-full">
+        <section className="px-4 pb-4 pt-6 lg:w-[calc(100%-300px)] sm:w-full">
           <h1 className="text-3xl font-bold">{title}</h1>
           <Separator className="my-4" />
           {children}
