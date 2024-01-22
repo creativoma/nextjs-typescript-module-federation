@@ -111,6 +111,7 @@ react-nextjs-tailwindcss-microfrontends/
 │   │   └── tsconfig.json
 │   │
 │   └── host/
+│       ├── cypress/
 │       ├── public/
 │       └── src/
 │            ├── assets/
@@ -164,7 +165,7 @@ Advanced Styling (15 points)
 - [X] Integrate Tailwind CSS JIT for optimizing the styling workflow and reducing the final bundle size.
 
 ### Task 6: Testing and Documentation (15 points)
-- [ ] Write end-to-end tests using Cypress for critical user flows.
+- [X] Write end-to-end tests using Cypress for critical user flows.
 - [X] Provide comprehensive documentation covering architecture, data models, and instructions for development and deployment.
 
 Submission Guidelines:
@@ -195,6 +196,7 @@ This project uses the following stack:
 - Version Control: [Git](https://git-scm.com/)
 - Repository Hosting: [GitHub](https://github.com/)
 - Data fetching: [SWR](https://swr.vercel.app/)
+- Testing: [Cypress](https://www.cypress.io/)
 
 ## Conclusions
 
