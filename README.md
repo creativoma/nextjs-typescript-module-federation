@@ -223,7 +223,7 @@ Despite the attractive integration, it is suggested to consider other stacks for
 
 - **Recommendation from the Creator of Module Federation:**
 
-In conversation with Zack Jackson, creator of Module Federation, he mentions that Next.js presents exceptional difficulties in terms of maintenance due to problems with Vercel in relation to MF.
+In conversation with [Zack Jackson](https://github.com/ScriptedAlchemy), creator of Module Federation, he mentions that Next.js presents exceptional difficulties in terms of maintenance due to problems with Vercel in relation to MF.
 
 The recommendation to carefully consider these difficulties provides perspective on the potential limitations in choosing this technology mix for projects beyond development.
 
