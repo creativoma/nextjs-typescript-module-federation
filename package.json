@@ -1,0 +1,46 @@
+{
+    "name": "nextjs-typescript-module-federation",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Next.js TypeScript Module Federation Monorepo",
+    "scripts": {
+        "dev": "pnpm run dev:all",
+        "dev:all": "concurrently \"pnpm run dev:socket\" \"pnpm run dev:host\" \"pnpm run dev:remote\"",
+        "dev:host": "pnpm --filter host dev",
+        "dev:remote": "pnpm --filter remote dev",
+        "dev:socket": "pnpm --filter host dev:socket",
+        "build": "pnpm run build:all",
+        "build:all": "pnpm run build:remote && pnpm run build:host",
+        "build:host": "pnpm --filter host build",
+        "build:remote": "pnpm --filter remote build",
+        "start": "pnpm run start:all",
+        "start:all": "concurrently \"pnpm run start:socket\" \"pnpm run start:host\" \"pnpm run start:remote\"",
+        "start:host": "pnpm --filter host start",
+        "start:remote": "pnpm --filter remote start",
+        "start:socket": "pnpm --filter host start:socket",
+        "lint": "pnpm -r lint",
+        "format": "pnpm -r format",
+        "test": "pnpm --filter host cypress:open",
+        "clean": "rm -rf node_modules apps/*/node_modules apps/*/.next",
+        "install:all": "pnpm install"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/creativoma/nextjs-typescript-module-federation.git"
+    },
+    "keywords": [
+        "nextjs",
+        "typescript",
+        "module-federation",
+        "monorepo",
+        "micro-frontend"
+    ],
+    "author": "creativoma",
+    "license": "MIT"
+}

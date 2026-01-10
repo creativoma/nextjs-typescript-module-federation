@@ -1,0 +1,7 @@
+packages:
+  - apps/*
+
+onlyBuiltDependencies:
+  - '@module-federation/nextjs-mf'
+  - cypress
+  - unrs-resolver
