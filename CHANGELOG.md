@@ -2,7 +2,33 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased] - 2026-01-10
+## [1.1.0] - 2026-01-10
+
+### Added
+
+- **Real-time Collaboration**: Implemented collaborative document editing using Socket.io
+  - Socket.io server for real-time bidirectional communication
+  - Collaborative editor component with live cursor and presence indicators
+  - User avatars showing active collaborators
+  - Real-time document synchronization across multiple users
+  - New `/dashboard/collaborative` page for accessing the feature
+
+- **Monorepo with pnpm**: Migrated from npm workspaces to pnpm for better performance
+  - Added `pnpm-workspace.yaml` configuration
+  - Root-level scripts to manage all apps from a single command
+  - `pnpm dev` starts Socket.io server + host + remote concurrently
+  - `pnpm build` builds all applications in the correct order
+  - Filter commands: `pnpm --filter <app> <script>`
+
+### Changed
+
+- Replaced all `npm` commands with `pnpm` equivalents
+- Updated project structure documentation
+- Added Socket.io to dependencies (`socket.io` and `socket.io-client`)
+
+---
+
+## [1.0.0] - 2026-01-10
 
 ### Security
 

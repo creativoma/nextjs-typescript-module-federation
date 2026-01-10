@@ -39,39 +39,63 @@ This project is a technical test for a React Developer position. It is a dashboa
 ## Requirements
 
 - Node: v20.10.0
-- Npm: v10.3.0
+- pnpm: v10.x
 - Module-federation/nextjs-mf: v8.8.50
 - Next: v14.2.35
 - Tailwindcss: v3.4.1
+- Socket.io: v4.7.4
 
 ## Installation / How to run
 
 It's a demo, so everything is in the same repository. However, it's a good practice to have each micro-frontend in a different repository and deploy them separately, using run-time integration, for example.
 
-So to install it you just need to clone the repository and run the following command:
+So to install it you just need to clone the repository and run the following commands:
 
 Install dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
-To run the samples in development mode, run the following command:
+To run in development mode (starts Socket.io server + host + remote):
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
-To run the samples in production mode, first build the samples using the following command:
+To build for production:
 
 ```bash
-npm run build
+pnpm build
 ```
 
-Then, run the following command to serve the samples:
+To run in production mode:
 
 ```bash
-npm run start
+pnpm start
+```
+
+### Monorepo Commands
+
+Run from the root directory:
+
+```bash
+# Development
+pnpm dev              # Start all (socket server + host + remote)
+pnpm dev:host         # Start only host app
+pnpm dev:remote       # Start only remote app
+pnpm dev:socket       # Start only socket server
+
+# Build
+pnpm build            # Build all apps
+pnpm build:host       # Build only host
+pnpm build:remote     # Build only remote
+
+# Other
+pnpm lint             # Lint all apps
+pnpm format           # Format all apps
+pnpm test             # Run Cypress tests
+pnpm clean            # Clean node_modules and .next
 ```
 
 ## Environment Variables
@@ -91,35 +115,43 @@ The environment variables are located in the `.env` file. The following environm
 - `/dashboard`: The dashboard page of the application. (Protected)
 - `/dashboard/website-analytics`: The website analytics page of the application. (Protected)
 - `/dashboard/clients`: The clients page of the application. (Protected)
+- `/dashboard/collaborative`: Real-time collaborative document editor. (Protected)
 
 ## Project Structure 
 
 ```bash
-react-nextjs-tailwindcss-microfrontends/
+nextjs-typescript-module-federation/
+│
+├── package.json              # Root package.json with monorepo scripts
+├── pnpm-workspace.yaml       # pnpm workspace configuration
 │
 ├── apps/
 │   │
 │   ├── remote/
 │   │   ├── public/
 │   │   ├── pages/
-│   │   ├── lib/
 │   │   ├── components/
-│   │   ├── styles/
-│   │   ├── ...
-│   │   ├── tailwind.config.js
+│   │   ├── tailwind.config.ts
 │   │   ├── next.config.js
 │   │   └── tsconfig.json
 │   │
 │   └── host/
 │       ├── cypress/
 │       ├── public/
+│       ├── server/
+│       │   └── socket-server.js    # Socket.io server for real-time collaboration
 │       └── src/
 │            ├── assets/
 │            ├── components/
+│            │   ├── collaborative/  # Real-time collaboration components
+│            │   └── ui/
 │            ├── pages/
+│            │   └── dashboard/
+│            │       └── collaborative/  # Collaborative document page
 │            ├── lib/
+│            │   ├── socket.ts       # Socket.io client configuration
+│            │   └── utils.ts
 │            ├── styles/
-│            ├── ...
 │            ├── tailwind.config.js
 │            ├── next.config.js
 │            └── tsconfig.json    
@@ -156,8 +188,8 @@ Custom Hook (15 points)
 
 ### Task 5: Advanced Features (30 points)
 Real-time Collaboration (15 points)
-- [ ] Implement real-time collaborative editing for a shared document.
-- [ ] Utilize a technology like Firebase Realtime Database or Socket.io for real-time updates.
+- [X] Implement real-time collaborative editing for a shared document.
+- [X] Utilize a technology like Firebase Realtime Database or Socket.io for real-time updates.
   
 Advanced Styling (15 points)
 
@@ -188,11 +220,13 @@ This project uses the following stack:
 - Concept: [Module Federation](https://webpack.js.org/concepts/module-federation/)
 - Language: [TypeScript](https://www.typescriptlang.org/)
 - Auth: [NextAuth.js](https://next-auth.js.org/)
+- Real-time: [Socket.io](https://socket.io/)
 - Deployment: [Vercel](https://vercel.com/)
 - Styling: [TailwindCSS](https://tailwindcss.com/)
 - Components: [MUI](https://mui.com/) and [shadcn/ui](https://ui.shadcn/ui.com/)
 - Linting: [ESLint](https://eslint.org/)
 - Formatting: [Prettier](https://prettier.io/)
+- Package Manager: [pnpm](https://pnpm.io/)
 - Version Control: [Git](https://git-scm.com/)
 - Repository Hosting: [GitHub](https://github.com/)
 - Data fetching: [SWR](https://swr.vercel.app/)
