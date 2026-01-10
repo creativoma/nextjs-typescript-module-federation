@@ -71,6 +71,12 @@ const DashboardLayout = ({
           >
             Clients
           </Button>
+          <Button
+            variant="outline"
+            onClick={() => router.push("/dashboard/collaborative")}
+          >
+            Collaborative Doc
+          </Button>
           <Separator />
           <Button onClick={() => signOut()}>
             Sign out <TbLogout className="ml-2" />
