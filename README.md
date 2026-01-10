@@ -40,9 +40,9 @@ This project is a technical test for a React Developer position. It is a dashboa
 
 - Node: v20.10.0
 - Npm: v10.3.0
-- Module-federation/nextjs-mf: v6.7.1
-- Next: v13.4.7
-- Tailwindcss: v3.0.23
+- Module-federation/nextjs-mf: v8.8.50
+- Next: v14.2.35
+- Tailwindcss: v3.4.1
 
 ## Installation / How to run
 
