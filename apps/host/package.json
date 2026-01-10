@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "set NEXT_PRIVATE_LOCAL_WEBPACK=true && next dev -p 3010",
-    "build": "set NEXT_PRIVATE_LOCAL_WEBPACK=true && next build",
-    "start": "set NEXT_PRIVATE_LOCAL_WEBPACK=true && next start -p 3010",
+    "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true next dev -p 3010",
+    "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
+    "start": "NEXT_PRIVATE_LOCAL_WEBPACK=true next start -p 3010",
     "format": "prettier --write .",
     "lint": "next lint",
     "cypress:open": "cypress open"
@@ -13,7 +13,8 @@
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
-    "@module-federation/nextjs-mf": "6.7.1",
+    "@headlessui/tailwindcss": "^0.2.2",
+    "@module-federation/nextjs-mf": "8.8.50",
     "@mui/icons-material": "^5.15.5",
     "@mui/material": "^5.15.5",
     "@mui/x-data-grid": "^6.18.7",
@@ -33,7 +34,7 @@
     "clsx": "^2.1.0",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.309.0",
-    "next": "13.4.7",
+    "next": "14.2.35",
     "next-auth": "^4.24.5",
     "next-themes": "^0.2.1",
     "prettier": "^3.2.2",
@@ -47,15 +48,15 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.3.1",
-    "@types/node": "latest",
+    "@types/node": "^20.11.5",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
-    "autoprefixer": "latest",
+    "autoprefixer": "^10.4.17",
     "cypress": "^13.6.3",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "15.0.1",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   }
 }
