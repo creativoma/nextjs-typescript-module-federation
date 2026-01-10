@@ -11,7 +11,7 @@ const nextConfig = {
         name: "remote",
         filename: `static/${remoteDir}/remoteEntry.js`,
         exposes: {
-          "./table": "components/table/table",
+          "./table": "./components/table/table",
         },
         shared: {
           tailwindcss: {

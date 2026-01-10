@@ -13,8 +13,8 @@
     "isolatedModules": true,
     "jsx": "preserve", // Update this line
     "incremental": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }
