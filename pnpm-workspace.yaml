@@ -1,7 +1,42 @@
 packages:
   - apps/*
 
+allowBuilds:
+  '@module-federation/nextjs-mf': true
+  cypress: true
+  sharp: true
+  unrs-resolver: true
+
 onlyBuiltDependencies:
   - '@module-federation/nextjs-mf'
   - cypress
+  - sharp
   - unrs-resolver
+
+overrides:
+  minimatch@<4: ^3.1.5
+  minimatch@>=9: ^9.0.7
+  shell-quote: ^1.8.4
+  axios: ^1.15.0
+  follow-redirects: ^1.15.12
+  form-data: ^4.0.6
+  qs: ^6.14.2
+  nanoid: ^3.3.16
+  postcss: ^8.5.10
+  ajv@<7: ^6.14.0
+  fast-uri: ^3.1.4
+  js-yaml: ^4.1.2
+  koa: ^3.1.2
+  lodash: ^4.17.24
+  picomatch: ^2.3.2
+  serialize-javascript: ^7.0.3
+  socket.io-parser: ^4.2.6
+  engine.io: ^6.6.7
+  tmp: ^0.2.6
+  uuid: ^11.1.1
+  ws: ^8.20.1
+  yaml@1: ^1.10.3
+  sharp: ^0.35.0
+  adm-zip: ^0.6.0
+  flatted: ^3.4.0
+  brace-expansion: ^1.1.13
