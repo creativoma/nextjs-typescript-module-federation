@@ -1,7 +1,6 @@
 import * as React from "react";
 import { signIn } from "next-auth/react";
 import { FaGithub } from "react-icons/fa";
-import { useRouter } from "next/router";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -32,14 +31,17 @@ const FormSignIn = ({
     });
   };
 
-  const router = useRouter();
-  const errorType = router.query.error as string | undefined;
+  const [error, setError] = React.useState("");
 
-  let error = "";
-  if (errorType === "CredentialsSignin") {
-    error =
-      "The email don't is correct, try again with DEMO email: example@correo.com";
-  }
+  React.useEffect(() => {
+    const errorType =
+      new URLSearchParams(window.location.search).get("error") ?? undefined;
+    if (errorType === "CredentialsSignin") {
+      setError(
+        "The email don't is correct, try again with DEMO email: example@correo.com",
+      );
+    }
+  }, []);
 
   return (
     <Card className="max-w-[100%] m-auto lg:max-w-[450px]">

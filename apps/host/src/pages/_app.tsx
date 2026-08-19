@@ -6,7 +6,7 @@ import SwitchTheme from "./components/switch-theme";
 
 export default function App({
   Component,
-  pageProps: { session, pageProps },
+  pageProps: { session, ...pageProps },
 }: AppProps) {
   return (
     <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
