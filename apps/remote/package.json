@@ -2,6 +2,7 @@
   "name": "remote",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@11.17.0",
   "scripts": {
     "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true next dev -p 3011",
     "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
